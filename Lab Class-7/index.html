@@ -1,0 +1,54 @@
+
+                 
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Accordion</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <h1>City Accordion</h1>
+    <div class="accordion-item">
+      <div class="accordion-header">DHAKA <span class="badge">New</span></div>
+      <div class="accordion-body">
+        <div class="alert">
+     Dhaka, formerly spelled as Dacca, is the capital and largest city of Bangladesh.
+      It is one of the largest and most densely populated cities in the world with a density
+       of about 34,000 citizens per square kilometers within a total area of approximately 300
+        square kilometers.
+        </div>  </div> </div>
+    <div class="accordion-item">
+      <div class="accordion-header">Rajshahi</div>
+      <div class="accordion-body">
+        <div class="alert">
+          Rajshahi is a metropolitan city and a major urban, administrative, commercial and 
+          educational centre of Bangladesh. It is also the administrative seat of the eponymous
+           division and district.
+        </div></div></div>
+    <div class="accordion-item">
+      <div class="accordion-header">Khulna</div>
+      <div class="accordion-body">
+        <div class="alert">
+        Khulna is the third-largest city in Bangladesh, after Dhaka and Chittagong.
+         It is the administrative centre of the Khulna District and the Khulna Division. 
+         It is the divisional centre of 10 districts of the division. Khulna
+         is also the second largest port city of Bangladesh after Chittagong because of Port of Mongla.
+          
+        </div></div></div> </div>
+  <script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const body = header.nextElementSibling;
+        body.classList.toggle('open');
+        if (body.style.maxHeight) {
+          body.style.maxHeight = null;
+        } else {
+          body.style.maxHeight = body.scrollHeight + "px";
+        } });  });
+  </script>
+</body>
+</html>
